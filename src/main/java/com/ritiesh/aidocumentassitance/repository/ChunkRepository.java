@@ -8,7 +8,9 @@ import org.springframework.stereotype.Repository;
 import com.ritiesh.aidocumentassitance.entity.DocumentChunk;
 
 @Repository
-public interface ChunkRepository extends JpaRepository<DocumentChunk,Long>{
-	
-	List<DocumentChunk> findByDocumentId(Long documentId);
+public interface ChunkRepository extends JpaRepository<DocumentChunk, Long> {
+    
+    List<DocumentChunk> findByDocumentId(Long documentId);
+    
+    List<DocumentChunk> findByDocumentIdIn(List<Long> documentIds);
 }
